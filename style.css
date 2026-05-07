@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --light: #fff;
+  --dark: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--light);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 8rem;
+  line-height: 1;
+  letter-spacing: -0.5rem;
+}
+
+p {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 550;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--light);
+  font-family: "Agdasima", sans-serif;
+  font-size: 7.5rem;
+  font-weight: 600;
+  line-height: 0.9;
+  display: block;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  background-color: var(--dark);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  will-change: clip-path;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: var(--light);
+  transform: scaleX(0);
+  transform-origin: left;
+  will-change: transform;
+}
+
+.preloader-images {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  height: 25rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  will-change: clip-path;
+  overflow: hidden;
+}
+
+.preloader-images .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  will-change: clip-path;
+  overflow: hidden;
+}
+
+.preloader-images .img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(2);
+  will-change: transform;
+}
+
+.preloader-copy {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  color: #fff;
+}
+
+.preloader-header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(60svh);
+  transform-origin: top;
+  will-change: transform;
+  z-index: 2;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  overflow: hidden;
+}
+
+.divider {
+  position: relative;
+  width: 100%;
+  height: 1.5px;
+  transform: scaleX(0);
+  background-color: rgba(0, 0, 0, 0.2);
+  will-change: transform;
+}
+
+.preloader-header a .char,
+.preloader-copy p .line,
+.header-row h1 .line {
+  position: relative;
+  display: inline-block;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  .preloader-images {
+    top: 35%;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .preloader-copy {
+    width: 80%;
+  }
+
+  .preloader-header {
+    transform: translateY(50svh);
+  }
+
+  .preloader-header a {
+    font-size: 4rem;
+  }
+}
